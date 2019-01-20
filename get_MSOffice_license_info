@@ -1,0 +1,145 @@
+@echo OFF
+echo.
+echo ******* CREDITS ********
+echo Get Office license informations
+echo __author__: Ernesto Pellegrino
+echo __twitter__: @aitenlabs
+echo __linkedin__: linkedin.com/in/pellegrinoernesto/
+echo __version__: 1.0.0
+echo ************************
+echo.
+echo.
+echo ***** DESCRIPTION ****** 
+echo the script will check informations from any Microsoft Office installed version and report them into a txt file, created in the same location where you launched this file.
+echo ************************ 
+echo.
+echo.
+echo ******* READ ME ********
+echo Once you press enter, it will take up to 15 seconds to complete
+echo ************************ 
+echo.
+
+pause
+
+set var1=*** Hi %username%! *** 
+set var2=*** INSTRUCTIONS ***
+set var3=In this file you should see the various last 5 characters of your Microsoft Office licenses. You executed one script fro each Office version, starting from 2010 to 2016. Please scroll down to check your version's license.
+set var4=%date%
+
+set HH=%TIME: =0%
+set HH=%HH:~0,2%
+set MI=%TIME:~3,2%
+
+set var5=%HH%:%MI%
+
+
+>ernestoScript_%username%_%ComputerName%.txt (
+
+  echo.
+  echo %var1%
+  echo.
+  echo.
+  echo %var2%
+  echo %var3%
+  echo.
+  echo.
+  echo user: %username%
+  echo pc: %ComputerName%
+  echo date-time: %var4%-%var5%
+  echo.
+  echo.
+
+  echo ***** OFFICE 2016 64bit ***** WIN 64bit *****
+  echo.
+  cscript "C:\Program Files\Microsoft Office\Office16\OSPP.VBS" /dstatus
+  echo.
+  echo.
+  echo.
+  echo.
+  echo.
+  echo.
+
+  echo ***** OFFICE 2016 32bit ***** WIN 64bit *****
+  echo.
+  cscript "C:\Program Files (x86)\Microsoft Office\Office16\OSPP.VBS" /dstatus
+  echo.
+  echo.
+  echo.
+  echo.
+  echo.
+  echo.
+
+  echo *****OFFICE 2016 32bit ***** WIN 32bit *****
+  echo.
+  cscript "C:\Program Files\Microsoft Office\Office16\OSPP.VBS" /dstatus
+  echo.
+  echo.
+  echo.
+  echo.
+  echo.
+  echo.
+
+  echo ***** OFFICE 2013 32bit ***** WIN 32bit *****
+  echo.
+  cscript "C:\Program Files\Microsoft Office\Office15\OSPP.VBS" /dstatus
+  echo.
+  echo.
+  echo.
+  echo.
+  echo.
+  echo.
+
+  echo ***** OFFICE 2013 32bit ***** WIN 64bit *****
+  echo.
+  cscript "C:\Program Files (x86)\Microsoft Office\Office15\OSPP.VBS" /dstatus
+  echo.
+  echo.
+  echo.
+  echo.
+  echo.
+  echo.
+
+  echo *****OFFICE 2013 64bit ***** WIN 64bit *****
+  echo.
+  cscript "C:\Program Files\Microsoft Office\Office15\OSPP.VBS" /dstatus
+  echo.
+  echo.
+  echo.
+  echo.
+  echo.
+  echo.
+
+  echo ***** OFFICE 2010 32bit ***** WIN 32bit *****
+  echo.
+  cscript "C:\Program Files\Microsoft Office\Office14\OSPP.VBS" /dstatus
+  echo.
+  echo.
+  echo.
+  echo.
+  echo.
+  echo.
+
+  echo ***** OFFICE 2010 32bit ***** WIN 64bit *****
+  echo.
+  cscript "C:\Program Files (x86)\Microsoft Office\Office14\OSPP.VBS" /dstatus
+  echo.
+  echo.
+  echo.
+  echo.
+  echo.
+  echo.
+
+  echo ***** OFFICE 2010 64bit ***** WIN 64bit *****
+  echo.
+  cscript "C:\Program Files\Microsoft Office\Office14\OSPP.VBS" /dstatus
+  echo.
+  echo.
+  echo.
+  echo.
+  echo.
+  echo.
+
+  
+)
+
+
